@@ -11,8 +11,8 @@ module.exports = async (kernel) => {
         params: {
           venv: "env",
           env: {
-            SERVER_NAME: "127.0.0.1",
-            SERVER_PORT: port
+            GRADIO_SERVER_NAME: "127.0.0.1",
+            GRADIO_SERVER_PORT: port
           },
           path: "app",
           message: [
