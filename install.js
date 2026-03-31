@@ -122,6 +122,13 @@ module.exports = {
     },
     // ── Step 10: Clone + patch RoMaV2 ───────────────────────────────────
     {
+      method: "fs.download",
+      params: {
+        url: "https://raw.githubusercontent.com/lukasHoel/video_to_world/main/patches/romav2-dataclasses.patch",
+        dir: "app/patches"
+      }
+    },
+    {
       method: "shell.run",
       params: {
         path: "app",
