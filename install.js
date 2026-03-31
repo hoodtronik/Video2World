@@ -84,6 +84,7 @@ module.exports = {
           CUDA_HOME: "{{envs.CUDA_PATH}}"
         },
         message: [
+          "uv pip install typing_extensions ninja wheel setuptools",
           "uv pip install --no-build-isolation \"git+https://github.com/nerfstudio-project/gsplat.git@v1.5.3\"",
         ]
       }
