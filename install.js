@@ -147,6 +147,7 @@ module.exports = {
           "uv pip install gradio",
           "uv pip install cmake ninja",
           "uv pip install hf-xet pip",
+          "uv pip install \"numpy<2\" \"opencv-python<4.12\"",
         ]
       }
     },
