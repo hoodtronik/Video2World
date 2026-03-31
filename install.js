@@ -144,7 +144,7 @@ module.exports = {
         message: [
           "uv pip install open3d scipy tyro tqdm tensorboard",
           "uv pip install lpips viser nerfview romatch",
-          "uv pip install gradio",
+          "uv pip install gradio imageio-ffmpeg",
           "uv pip install cmake ninja",
           "uv pip install hf-xet pip",
           "uv pip install \"numpy<2\" \"opencv-python<4.12\"",
