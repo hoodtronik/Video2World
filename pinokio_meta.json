@@ -1,0 +1,15 @@
+{
+  "links": [{
+    "title": "lukasHoel (wrote the app)",
+    "links": [{
+      "title": "Github",
+      "value": "https://github.com/lukasHoel"
+    }, {
+      "title": "Project Page",
+      "value": "https://lukashoel.github.io/video_to_world/"
+    }, {
+      "title": "Paper (arXiv)",
+      "value": "https://arxiv.org/abs/2603.16736"
+    }]
+  }]
+}
