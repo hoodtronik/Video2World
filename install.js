@@ -25,7 +25,7 @@ module.exports = {
       method: "shell.run",
       params: {
         message: [
-          "git clone https://github.com/lukasHoel/video_to_world app",
+          "if not exist app git clone https://github.com/lukasHoel/video_to_world app",
         ]
       }
     },
@@ -58,7 +58,7 @@ module.exports = {
       params: {
         path: "app",
         message: [
-          "git clone https://github.com/ByteDance-Seed/depth-anything-3 third_party/depth-anything-3",
+          "if not exist third_party\\depth-anything-3 git clone https://github.com/ByteDance-Seed/depth-anything-3 third_party/depth-anything-3",
           "git -C third_party/depth-anything-3 checkout 2c21ea849ceec7b469a3e62ea0c0e270afc3281a",
         ]
       }
@@ -120,21 +120,13 @@ module.exports = {
         ]
       }
     },
-    // ── Step 10: Clone + patch RoMaV2 ───────────────────────────────────
-    {
-      method: "fs.download",
-      params: {
-        url: "https://raw.githubusercontent.com/lukasHoel/video_to_world/main/patches/romav2-dataclasses.patch",
-        dir: "app/patches"
-      }
-    },
+    // ── Step 10: Clone RoMaV2 ───────────────────────────────────────────
     {
       method: "shell.run",
       params: {
         path: "app",
         message: [
-          "git clone https://github.com/Parskatt/RoMaV2 third_party/RoMaV2",
-          "git -C third_party/RoMaV2 apply ../../patches/romav2-dataclasses.patch || echo \"Patch already applied\""
+          "if not exist third_party\\RoMaV2 git clone https://github.com/Parskatt/RoMaV2 third_party/RoMaV2"
         ]
       }
     },
