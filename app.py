@@ -366,12 +366,6 @@ footer { display: none !important; }
 
 with gr.Blocks(
     title="Video2World",
-    theme=gr.themes.Soft(
-        primary_hue="violet",
-        secondary_hue="blue",
-        neutral_hue="slate",
-    ),
-    css=custom_css,
 ) as demo:
     gr.HTML("<h1 class='main-title'>🌍 Video2World</h1>")
     gr.HTML("<p class='subtitle'>Reconstruct 3D Gaussian Splatting Worlds from Video</p>")
@@ -520,4 +514,11 @@ if __name__ == "__main__":
         server_name=host,
         server_port=port,
         show_error=True,
+        theme=gr.themes.Soft(
+            primary_hue="violet",
+            secondary_hue="blue",
+            neutral_hue="slate",
+        ),
+        css=custom_css,
     )
+
