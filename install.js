@@ -64,13 +64,7 @@ module.exports = {
       }
     },
     // ── Step 7: Apply DA3 trajectory-export patch ────────────────────────
-    {
-      method: "fs.download",
-      params: {
-        url: "https://raw.githubusercontent.com/lukasHoel/video_to_world/main/patches/da3-export-trajectory.patch",
-        dir: "app/patches"
-      }
-    },
+
     {
       method: "shell.run",
       params: {
