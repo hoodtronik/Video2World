@@ -18,6 +18,14 @@ import shutil
 from pathlib import Path
 from datetime import datetime
 
+# Inject ffmpeg into path for Gradio video compatibility
+try:
+    import imageio_ffmpeg
+    ffmpeg_dir = os.path.dirname(imageio_ffmpeg.get_ffmpeg_exe())
+    os.environ["PATH"] = ffmpeg_dir + os.pathsep + os.environ["PATH"]
+except ImportError:
+    pass
+
 # ── Configuration ────────────────────────────────────────────────────────────
 OUTPUT_BASE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "app", "outputs")
 os.makedirs(OUTPUT_BASE, exist_ok=True)
