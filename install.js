@@ -90,6 +90,9 @@ module.exports = {
       params: {
         venv: "env",
         path: "app",
+        env: {
+          CUDA_HOME: "{{envs.CUDA_PATH}}"
+        },
         message: [
           "uv pip install --no-build-isolation \"git+https://github.com/nerfstudio-project/gsplat.git@v1.5.3\"",
         ]
@@ -101,6 +104,9 @@ module.exports = {
       params: {
         venv: "env",
         path: "app",
+        env: {
+          CUDA_HOME: "{{envs.CUDA_PATH}}"
+        },
         message: [
           "uv pip install setuptools==81.0.0",
           "uv pip install --no-build-isolation \"git+https://github.com/NVlabs/tiny-cuda-nn/#subdirectory=bindings/torch\"",
