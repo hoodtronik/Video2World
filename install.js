@@ -63,17 +63,6 @@ module.exports = {
         ]
       }
     },
-    // ── Step 6: Install DepthAnything3 as editable ──────────────────────
-    {
-      method: "shell.run",
-      params: {
-        venv: "env",
-        path: "app",
-        message: [
-          "uv pip install -e third_party/depth-anything-3",
-        ]
-      }
-    },
     // ── Step 7: Apply DA3 trajectory-export patch ────────────────────────
     {
       method: "fs.download",
