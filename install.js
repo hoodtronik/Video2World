@@ -87,7 +87,7 @@ module.exports = {
       params: {
         path: "app",
         message: [
-          "git -C third_party/depth-anything-3 apply ../../patches/da3-export-trajectory.patch",
+          "git -C third_party/depth-anything-3 apply ../../patches/da3-export-trajectory.patch || echo \"Patch already applied\""
         ]
       }
     },
@@ -134,7 +134,7 @@ module.exports = {
         path: "app",
         message: [
           "git clone https://github.com/Parskatt/RoMaV2 third_party/RoMaV2",
-          "git -C third_party/RoMaV2 apply ../../patches/romav2-dataclasses.patch",
+          "git -C third_party/RoMaV2 apply ../../patches/romav2-dataclasses.patch || echo \"Patch already applied\""
         ]
       }
     },
